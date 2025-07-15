@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+#sec1{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+#s1top{
+    width: 100%;
+}
+#s1top img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#s1top #para{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#s1mid{
+    width: 100%;
+}
+
+#s1midtop img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#s1bot{
+    width: 100%;
+    text-align: left;
+}
+#s1bot h1{
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: 400;
+}
+#s1bot p{
+    margin-top: 1rem;
+}
+#s1brand #text{
+    display: flex;
+    justify-content: space-between;
+}
+#text h1{
+    font-weight: 300;
+    margin-top: 1rem;
+}
+.line{
+    margin-top: 1rem ;
+}
+#sec2{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+#s2top img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#s2bot{
+    display: flex;
+    width: 100%;
+}
+#s2botleft{
+    width: 20%;
+    /* background-color: green; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+#s2botleft p{
+    writing-mode: vertical-lr;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+#s2botright{
+    width: 80%;
+    /* background-color: red; */
+    text-align: left;
+}
+
+#s2botright h1{
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+#s2botright p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+#sec3{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+#s3top h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+#s3bot{
+    width: 100%;
+}
+#s3bot img{
+    width: 100%;
+}
+#s3toptop h5 i{
+    border: 1px solid black;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+#s3topbot h5 i{
+    border: 1px solid black;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.elem h3{
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.elem p{
+    width: 85%;
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 1.5rem;
+}
+.elem h5{
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sec4{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.line{
+    margin-top: 2rem;
+}
+#sec4 img{
+    margin-top: 1rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#s4midtop img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.desktop-only{
+    display: none;
+}
+.content2 h1{
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.content2 p{
+    font-size: 1.2rem;
+}
+.content2 h5{
+    margin-top: 1rem;
+    font-weight: 300;
+}
+.content2 h5 i{
+    border: 1px solid black;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:1024px){
+    #sec1{
+        width: 100%;
+        padding: 2rem 4rem;
+        box-sizing: border-box;
+    }
+
+    #s1mid{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #s1midtop{
+        width: 55%;
+    }
+    #s1midbot{
+        width: 40%;
+    }
+    #s1bot h1{
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+    #s1bot p{
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+    #text h1{
+        font-size: 3rem;
+    }
+    #sec2{
+        display: flex;
+        /* justify-content: space-between; */
+    }
+    #s2bot{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    #s2botleft{
+        width: 5%;
+    }
+    #s2botright{
+        width: 80%;
+    }
+    #s2botright h1{
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 400;
+    }
+    #s2botright p{
+        width: 73%;
+        font-size: 1.4rem;
+        margin-top: 6rem;
+    }
+    #sec3{
+        display: flex;
+        justify-content: space-between;
+        /* background-color: green; */
+    }
+    #s3top h1{
+        font-size: 7rem;
+        font-weight: 300;
+        width: 70%;
+        line-height: 1;
+    }
+    #content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #s3toptop{
+        width: 45%;
+    }
+    #s3topbot{
+        width: 45%;
+    }
+    #s3top{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    #s3bot{
+        width: 55%;
+    }
+    #s3bot img{
+        width: 100%;
+    }
+    .elem h3{
+        margin-bottom: 2rem;
+    }
+    .elem p{
+        margin-bottom: 2rem;
+    }
+    .elem h5{
+        margin-bottom: 3rem;
+    }
+    #sec4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #sec4 img{
+        margin-bottom: 2rem;
+    } 
+    #s4mid{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #s4midtop{
+        display: flex;
+        justify-content: space-between;
+    }
+    #s4midtop img{
+        width: 30%;
+    }
+    #s4midtop .content2{
+        width: 30%;
+    }
+    #s4midbot{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #s4midbot img{
+        width: 30%;
+    }
+    #s4midbot .content2{
+        width: 30%;
+    }
+    .content2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .content2 h1{
+        font-size: 4rem;
+    }
+    .content2 p{
+        width: 70%;
+    }
+    .content2 h5{
+        font-size: 1rem;
+    }
+    .desktop-only{
+        display: flex;
+    }
+}
