@@ -1,0 +1,16 @@
+💡 Q4: Image Previewer with Validation
+
+Problem:
+User uploads an image and sees a live preview. Only allow JPEG/PNG under 2MB.
+
+✅ Steps:
+	1.	HTML file input + preview div
+	2.	Add change listener on input
+	3.	Check file type
+	•	Use file.type (MIME type)
+	4.	Check file size
+	•	file.size in bytes
+	5.	Show preview using
+	•	URL.createObjectURL(file)
+	6.	Insert preview image into DOM
+

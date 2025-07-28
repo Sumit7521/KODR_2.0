@@ -1,0 +1,17 @@
+💡 Q5: Comment System with Replies
+
+Problem:
+Design a basic comment system where:
+	•	User can comment
+	•	Can reply to any comment (nested once)
+
+✅ Steps:
+	1.	Create input field for comment
+	2.	Store comment in array
+	•	Each comment has: id, text, replies[]
+	3.	Render comments
+	•	Use .map() and nested loops for replies
+	4.	Attach reply buttons under each comment
+	5.	On click, show reply input
+	6.	Push reply to the right comment object
+	7.	Re-render comments
