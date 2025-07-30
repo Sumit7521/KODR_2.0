@@ -1,8 +1,13 @@
 import React from 'react'
+import Twowaybind from './components/Twowaybind'
+import Hookform from './components/Hookform'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      {/* <Twowaybind /> */}
+      <Hookform />
+    </div>
   )
 }
 
