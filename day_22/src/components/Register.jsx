@@ -41,7 +41,7 @@ const Register = ({}) => {
 
     const updatedUsers = [...userData, formData];
     setUserData(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers)); // ✅ Use the updated data
+    localStorage.setItem("users", JSON.stringify(updatedUsers)); 
 
     setFormData({ username: '', email: '', mobile: '', password: '' }); 
     toast.success("User registered");
@@ -50,7 +50,7 @@ const Register = ({}) => {
 
 
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center'>
       <form onSubmit={handleSubmit} className='flex flex-col gap-2 w-50'>
         <input
           className='border-2 rounded px-3 py-1'
