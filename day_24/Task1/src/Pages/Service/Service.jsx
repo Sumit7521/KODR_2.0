@@ -6,6 +6,9 @@ const Service = () => {
     <div className="min-h-screen bg-white p-6 flex flex-col items-center">
       <div className="max-w-3xl w-full">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Our Services</h2>
+        <h2>
+            <Link to="/service">Back</Link>
+        </h2>
         <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
           <li>
             <Link to="/service/web-design" className="text-blue-600 hover:underline">
