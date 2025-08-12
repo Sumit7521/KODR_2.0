@@ -1,24 +1,37 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { MydataContext } from '../Context/Contex'
 
 const Users = () => {
-  const [users, setUsers] = useState([])
+
+const { users,setUsers, getuser , filter , setfilter} = useContext(MydataContext)
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/users")
-      .then(res => {
-        console.log(res.data)
-        setUsers(res.data)
-      })
-      .catch(err => {
-        console.error("Error fetching users:", err)
-      })
+    if(users.length<=0){
+      getuser()
+    }
+    
   }, [])
 
+  const deletehandler =(u)=>{
+    console.log(u)
+    setUsers(()=>users.filter((val)=> val.id !== u))
+    setfilter(filter.filter((val)=> val.id !== u))
+  }
+
   return (
-    <div className="p-6 gap-6 flex flex-col">
-      {users.length > 0 ? (
-        users.map(user => (
+    <div>
+      <label>Filter users :</label>
+      <select>
+        <option value="">select</option>
+        <option value="">starts with 'D'</option>
+        <option value="">starts with 'J'</option>
+        <option value="">starts with 'K'</option>
+        <option value="">starts with 'M'</option>
+      </select>
+      <div className="p-6 gap-6 flex flex-col">
+      {users?.length > 0 ? (
+        users?.map(user => (
           <div 
             key={user.id} 
             className="bg-white shadow-md rounded-lg p-4 border border-gray-200"
@@ -33,6 +46,7 @@ const Users = () => {
               <strong>Address:</strong> {user.address.number} {user.address.street}, {user.address.city}, {user.address.zipcode}
             </p>
             <button
+              onClick={()=>deletehandler(user.id)}
               className="mt-4 bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded"
             >
               Delete
@@ -43,6 +57,8 @@ const Users = () => {
         <p>Loading Users...</p>
       )}
     </div>
+    </div>
+    
   )
 }
 
