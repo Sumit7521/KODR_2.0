@@ -1,21 +1,36 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router'
-import Navbar from './components/Navbar'
-import Home from './Pages/Home'
-import Users from './Pages/Users'
-import Add_User from '../Pages/Add_User'
+import { createBrowserRouter,Outlet,RouterProvider } from 'react-router'
+import Navbar from '../components/Navbar'
+import Home from '../Pages/Home'
+import Users from '../Pages/Users'
+import AddUser from '../Pages/Add_User'
 
-const App = () => {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/addusers" element={<Add_User />} />
-      </Routes>
-    </Router>
-  )
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element:
+          <div className='flex'>
+            <Navbar/>
+            <Outlet />
+          </div>,
+      children:[{
+        path: '/',
+        element:<Home />
+      },
+    {
+      path:'/user',
+      element:<Users/>
+    },
+  {
+      path:'/adduser',
+      element:<AddUser/>
+    }]
+        
+    }
+  ]
+)
+
+export default function Routing(){
+  return <RouterProvider router={router} />
 }
-
-export default App
