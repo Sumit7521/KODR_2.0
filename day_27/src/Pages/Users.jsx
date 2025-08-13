@@ -10,7 +10,6 @@ const { users,setUsers, getuser , filter , setfilter} = useContext(MydataContext
     if(users.length<=0){
       getuser()
     }
-    
   }, [])
 
   const deletehandler =(u)=>{
@@ -19,15 +18,33 @@ const { users,setUsers, getuser , filter , setfilter} = useContext(MydataContext
     setfilter(filter.filter((val)=> val.id !== u))
   }
 
+  const filterhandler = (e) =>{
+    // console.log(e.target.value)
+    // console.log(filter);
+    
+    // setfilter(filter.filter((val)=>val?.name?.firstname?.toLowerCase().startsWith(e.target.value)))
+
+    const letter = e.target.value.toLowerCase();
+
+    if (letter === "all") {
+    console.log("All users:", users);
+  } else {
+    const filtered = users.filter(user =>
+      user?.name?.firstname?.toLowerCase().startsWith(letter)
+    );
+    console.log(`Users starting with "${letter}":`, filtered);
+    }
+  }
+
   return (
     <div>
-      <label>Filter users :</label>
-      <select>
-        <option value="">select</option>
-        <option value="">starts with 'D'</option>
-        <option value="">starts with 'J'</option>
-        <option value="">starts with 'K'</option>
-        <option value="">starts with 'M'</option>
+      <label>Filter users : </label>
+      <select onChange={filterhandler}>
+        <option value="All">select</option>
+        <option value="d">starts with 'D'</option>
+        <option value="j">starts with 'J'</option>
+        <option value="k">starts with 'K'</option>
+        <option value="m">starts with 'M'</option>
       </select>
       <div className="p-6 gap-6 flex flex-col">
       {users?.length > 0 ? (
