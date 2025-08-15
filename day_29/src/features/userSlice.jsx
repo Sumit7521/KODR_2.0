@@ -9,7 +9,7 @@ export const userSlice = createSlice({
         addUser: (state,actions) =>{
             state.value = actions.payload
         },
-        deleteuser : (state)=>{
+        deleteuser : (state)=>{ 
             state.value = ''
         }
     }
