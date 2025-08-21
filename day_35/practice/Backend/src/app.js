@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express()
 app.use(express.json())
 app.use(cors({
-  origin: 'https://gallary-henna.vercel.app/',
+  origin: 'https://gallary-henna.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
   credentials: true // if you want to send cookies
 }));
