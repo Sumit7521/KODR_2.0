@@ -13,7 +13,7 @@ const Form = () => {
       formData.append("post", data.file[0]);
       formData.append("caption", data.caption);
 
-      const response = await axios.post("http://localhost:3000/post", formData, {
+      const response = await axios.post("https://kodr-2-0-1.onrender.com/post", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -9,7 +9,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/post');
+        const res = await axios.get('https://kodr-2-0-1.onrender.com/post');
         setPosts(res.data);
         setLoading(false);
       } catch (err) {
